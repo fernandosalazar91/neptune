@@ -10,9 +10,11 @@ import SwiftUI
 
 struct Nft: Codable, Identifiable {
     let id = UUID()
-    var image_url: String
+    var token_id: String
     var name: String
     var description: String
+    var image_url: String
+    var animation_url: String
 }
 
 class Api {
