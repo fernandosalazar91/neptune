@@ -1,0 +1,19 @@
+{
+  "commitish" : "v1.2.2",
+  "iOS" : [
+    {
+      "swiftToolchainVersion" : "5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)",
+      "hash" : "d2de16cfb124b42af8c14498d7d2f413dd7ee45c8f34a80003f44dca1b0ed8ee",
+      "name" : "SipHash",
+      "container" : "SipHash.xcframework",
+      "identifier" : "ios-arm64_armv7"
+    },
+    {
+      "swiftToolchainVersion" : "5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)",
+      "hash" : "9a203f600b41c4edc6bdd36aab3964cf6d5cb51bba0acbcbd2ae632bffe16b53",
+      "name" : "SipHash",
+      "container" : "SipHash.xcframework",
+      "identifier" : "ios-arm64_i386_x86_64-simulator"
+    }
+  ]
+}

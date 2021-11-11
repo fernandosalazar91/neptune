@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		589F8F2DD4F5F63D8190BA44 /* Pods_NftDisplay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77DADF75BCBB0C0F248AF6C5 /* Pods_NftDisplay.framework */; };
 		9612DC082738EF030013E259 /* NftDisplayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9612DC072738EF030013E259 /* NftDisplayApp.swift */; };
 		9612DC0A2738EF030013E259 /* NftListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9612DC092738EF030013E259 /* NftListView.swift */; };
 		9612DC0C2738EF060013E259 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9612DC0B2738EF060013E259 /* Assets.xcassets */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		77DADF75BCBB0C0F248AF6C5 /* Pods_NftDisplay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NftDisplay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BF3C6EFE7A48B93BEA44B34 /* Pods-NftDisplay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NftDisplay.release.xcconfig"; path = "Target Support Files/Pods-NftDisplay/Pods-NftDisplay.release.xcconfig"; sourceTree = "<group>"; };
 		9612DC042738EF030013E259 /* NftDisplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NftDisplay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9612DC072738EF030013E259 /* NftDisplayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftDisplayApp.swift; sourceTree = "<group>"; };
 		9612DC092738EF030013E259 /* NftListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftListView.swift; sourceTree = "<group>"; };
@@ -25,6 +28,8 @@
 		965410D72739B3B8009BD304 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		9679A66F273A4DE4001D4F8E /* NftDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftDetailView.swift; sourceTree = "<group>"; };
 		9692C706273AEC7500ED3D90 /* ApiImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiImage.swift; sourceTree = "<group>"; };
+		D2A890FB9F67C3B43CBA63E9 /* Pods-NftDisplay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NftDisplay.debug.xcconfig"; path = "Target Support Files/Pods-NftDisplay/Pods-NftDisplay.debug.xcconfig"; sourceTree = "<group>"; };
+		EDBBBEC5273D9A94004FA0F2 /* carthage.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = carthage.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,17 +37,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				589F8F2DD4F5F63D8190BA44 /* Pods_NftDisplay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		059E7F00E75E619847108236 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D2A890FB9F67C3B43CBA63E9 /* Pods-NftDisplay.debug.xcconfig */,
+				7BF3C6EFE7A48B93BEA44B34 /* Pods-NftDisplay.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		80EE247BA258C6F159C50347 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				77DADF75BCBB0C0F248AF6C5 /* Pods_NftDisplay.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9612DBFB2738EF030013E259 = {
 			isa = PBXGroup;
 			children = (
+				EDBBBEC5273D9A94004FA0F2 /* carthage.sh */,
 				9612DC062738EF030013E259 /* NftDisplay */,
 				9612DC052738EF030013E259 /* Products */,
+				059E7F00E75E619847108236 /* Pods */,
+				80EE247BA258C6F159C50347 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,9 +109,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9612DC122738EF060013E259 /* Build configuration list for PBXNativeTarget "NftDisplay" */;
 			buildPhases = (
+				CF5C15BB1C1D031BA362F257 /* [CP] Check Pods Manifest.lock */,
 				9612DC002738EF030013E259 /* Sources */,
 				9612DC012738EF030013E259 /* Frameworks */,
 				9612DC022738EF030013E259 /* Resources */,
+				6B677EE695CD3627A518DD51 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -140,6 +168,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6B677EE695CD3627A518DD51 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NftDisplay/Pods-NftDisplay-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NftDisplay/Pods-NftDisplay-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NftDisplay/Pods-NftDisplay-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF5C15BB1C1D031BA362F257 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NftDisplay-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9612DC002738EF030013E259 /* Sources */ = {
@@ -275,6 +345,7 @@
 		};
 		9612DC132738EF060013E259 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2A890FB9F67C3B43CBA63E9 /* Pods-NftDisplay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -305,6 +376,7 @@
 		};
 		9612DC142738EF060013E259 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BF3C6EFE7A48B93BEA44B34 /* Pods-NftDisplay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

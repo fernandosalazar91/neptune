@@ -1,0 +1,19 @@
+{
+  "commitish" : "v5.3.0",
+  "iOS" : [
+    {
+      "swiftToolchainVersion" : "5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)",
+      "hash" : "a7eb9219df11f27c6924bc80c778d2a1c3ff5063529dfdf59d69c4509211ffea",
+      "name" : "BigInt",
+      "container" : "BigInt.xcframework",
+      "identifier" : "ios-arm64_i386_x86_64-simulator"
+    },
+    {
+      "swiftToolchainVersion" : "5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)",
+      "hash" : "2d00fdc5700bbb535b845512c841ad40f6b68e81110aac1853b9611114cbdce2",
+      "name" : "BigInt",
+      "container" : "BigInt.xcframework",
+      "identifier" : "ios-arm64_armv7"
+    }
+  ]
+}
