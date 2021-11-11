@@ -25,7 +25,6 @@
 		965410D72739B3B8009BD304 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		9679A66F273A4DE4001D4F8E /* NftDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftDetailView.swift; sourceTree = "<group>"; };
 		9692C706273AEC7500ED3D90 /* ApiImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiImage.swift; sourceTree = "<group>"; };
-		EDBBBEC5273D9A94004FA0F2 /* carthage.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = carthage.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,20 +38,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		059E7F00E75E619847108236 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		9612DBFB2738EF030013E259 = {
 			isa = PBXGroup;
 			children = (
-				EDBBBEC5273D9A94004FA0F2 /* carthage.sh */,
 				9612DC062738EF030013E259 /* NftDisplay */,
 				9612DC052738EF030013E259 /* Products */,
-				059E7F00E75E619847108236 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
