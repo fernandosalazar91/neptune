@@ -1,6 +1,0 @@
-framework module Pods_NftDisplay {
-  umbrella header "Pods-NftDisplay-umbrella.h"
-
-  export *
-  module * { export * }
-}
