@@ -13,7 +13,6 @@
 		9612DC0F2738EF060013E259 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9612DC0E2738EF060013E259 /* Preview Assets.xcassets */; };
 		965410D82739B3B8009BD304 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965410D72739B3B8009BD304 /* Data.swift */; };
 		9679A670273A4DE4001D4F8E /* NftDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9679A66F273A4DE4001D4F8E /* NftDetailView.swift */; };
-		9692C707273AEC7500ED3D90 /* ApiImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9692C706273AEC7500ED3D90 /* ApiImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +23,6 @@
 		9612DC0E2738EF060013E259 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		965410D72739B3B8009BD304 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		9679A66F273A4DE4001D4F8E /* NftDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftDetailView.swift; sourceTree = "<group>"; };
-		9692C706273AEC7500ED3D90 /* ApiImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +55,6 @@
 		9612DC062738EF030013E259 /* NftDisplay */ = {
 			isa = PBXGroup;
 			children = (
-				9692C706273AEC7500ED3D90 /* ApiImage.swift */,
 				9612DC072738EF030013E259 /* NftDisplayApp.swift */,
 				9612DC092738EF030013E259 /* NftListView.swift */,
 				9679A66F273A4DE4001D4F8E /* NftDetailView.swift */,
@@ -120,6 +117,9 @@
 				Base,
 			);
 			mainGroup = 9612DBFB2738EF030013E259;
+			packageReferences = (
+				EDD9B105273DC2DC00F0465F /* XCRemoteSwiftPackageReference "web3swift" */,
+			);
 			productRefGroup = 9612DC052738EF030013E259 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -147,7 +147,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9612DC0A2738EF030013E259 /* NftListView.swift in Sources */,
-				9692C707273AEC7500ED3D90 /* ApiImage.swift in Sources */,
 				965410D82739B3B8009BD304 /* Data.swift in Sources */,
 				9612DC082738EF030013E259 /* NftDisplayApp.swift in Sources */,
 				9679A670273A4DE4001D4F8E /* NftDetailView.swift in Sources */,
@@ -289,7 +288,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -319,7 +318,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -355,6 +354,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EDD9B105273DC2DC00F0465F /* XCRemoteSwiftPackageReference "web3swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/skywinder/web3swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 9612DBFC2738EF030013E259 /* Project object */;
 }

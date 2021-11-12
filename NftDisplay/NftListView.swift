@@ -32,7 +32,11 @@ struct NftCell: View {
     
     var body: some View {
         HStack {
-            ImageView(withURL: nft.image_url)
+            AsyncImage(url: URL(string: nft.image_url)) { image in
+                image.resizable().scaledToFill()
+            } placeholder: { ProgressView() }
+                .frame(width:100, height:100)
+                .clipped()
             VStack(alignment: .leading, spacing: 5) {
                 Text(nft.name)
                     .font(.title2)
@@ -41,26 +45,6 @@ struct NftCell: View {
                     .font(.subheadline)
                     .foregroundColor(.secondary)
             }
-        }
-    }
-}
-
-struct ImageView: View {
-    @ObservedObject var imageLoader:ImageLoader
-    @State var image:UIImage = UIImage()
-
-    init(withURL url:String) {
-        imageLoader = ImageLoader(urlString:url)
-    }
-
-    var body: some View {
-        
-            Image(uiImage: image)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width:100, height:100)
-                .onReceive(imageLoader.didChange) { data in
-                self.image = UIImage(data: data) ?? UIImage()
         }
     }
 }

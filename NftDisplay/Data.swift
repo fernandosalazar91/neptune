@@ -8,8 +8,12 @@
 import Foundation
 import SwiftUI
 
+struct AssetsResponse: Codable {
+    var assets: [Nft]
+}
+
 struct Nft: Codable, Identifiable {
-    let id = UUID()
+    var id: Int
     var token_id: String
     var name: String
     var description: String
@@ -19,16 +23,18 @@ struct Nft: Codable, Identifiable {
 
 class Api {
     func getNfts(completion: @escaping ([Nft]) -> ()) {
-        guard let url = URL(string: "http://localhost:4000/assets") else { return }
+        let owneraddress = "0xce6c126eeec5abca0e6a80653a0b693051f55cda"
+        let url = URL(string: "https://api.opensea.io/api/v1/assets?owner=\(owneraddress)&order_direction=desc&offset=0&limit=20")!
         
         URLSession.shared.dataTask(with: url) { (data, _, _) in
-            let nfts = try! JSONDecoder().decode([Nft].self, from: data!)
-            print(nfts)
+            let response = try! JSONDecoder().decode(AssetsResponse.self, from: data!)
+            print(response.assets)
             
             DispatchQueue.main.async {
-                completion(nfts)
+                completion(response.assets)
             }
         }
         .resume()
     }
+    
 }
