@@ -16,29 +16,47 @@ struct NftDetailView: View {
             AsyncImage(url: URL(string: nft.image_url)) { image in
                 image.resizable().scaledToFill()
             } placeholder: { ProgressView() }
-                .frame(width:100, height:100)
+                .frame(width:280, height:280)
                 .clipped()
-            Text(nft.name)
-                .font(.title2)
-                .fontWeight(.semibold)
-                .lineLimit(2)
-
-            Text(nft.description)
-                .font(.title3)
-                .fontWeight(.semibold)
-                .lineLimit(2)
-        
-            Text(nft.animation_url ?? "nil")
-                .font(.body)
-                .lineLimit(2)
-                .padding()
-        
-            Text(nft.token_id)
-                .font(.body)
-                .lineLimit(2)
-                .padding()
+            TableView(nft: nft)
         }
         .navigationTitle("Details")
+    }
+}
+
+struct TableView: View {
+
+    var nft: Nft
+    
+    var body: some View {
+        VStack(spacing: 10) {
+            HStack {
+                Text("Name:")
+                    .font(.system(size: 12, weight: .light))
+                Spacer()
+                Text(nft.name)
+                    .font(.system(size: 12, weight: .light))
+                    .fontWeight(.semibold)
+                    .lineLimit(1)
+            }
+            HStack {
+                Text("Description:")
+                    .font(.system(size: 12, weight: .light))
+                Spacer()
+                Text(nft.description)
+                    .font(.system(size: 12, weight: .light))
+                    .lineLimit(1)
+            }
+            HStack {
+                Text("Animation Url:")
+                    .font(.system(size: 12, weight: .light))
+                Spacer()
+                Text(nft.animation_url ?? "")
+                    .font(.system(size: 12, weight: .light))
+                    .lineLimit(1)
+            }
+        }
+        .padding()
     }
 }
 
