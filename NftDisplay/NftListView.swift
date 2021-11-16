@@ -7,22 +7,24 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct NftListView: View {
+    
     @State var nfts: [Nft] = []
+    let walletAddress: String
+    let api = Api()
     
     var body: some View {
-        NavigationView {
-            List(nfts) { nft in
-                NavigationLink(destination: NftDetailView(nft: nft), label: {
-                    NftCell(nft: nft)
-                })
-            }
-            .onAppear {
-                Api().getNfts { (nfts) in
-                    self.nfts = nfts
-                }
+        List(nfts) { nft in
+            NavigationLink(destination: NftDetailView(nft: nft), label: {
+                NftCell(nft: nft)
+            })
+        }
+        .onAppear {
+            api.getNfts(publicAddress: walletAddress) { (nfts) in
+                self.nfts = nfts
             }
         }
+        .navigationTitle("My NFT Collection")
     }
 }
 
@@ -51,6 +53,6 @@ struct NftCell: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        NftListView(walletAddress: "emptystring")
     }
 }

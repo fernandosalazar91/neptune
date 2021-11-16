@@ -28,7 +28,7 @@ struct NftDetailView: View {
                 .fontWeight(.semibold)
                 .lineLimit(2)
         
-            Text(nft.animation_url)
+            Text(nft.animation_url ?? "nil")
                 .font(.body)
                 .lineLimit(2)
                 .padding()
@@ -38,6 +38,7 @@ struct NftDetailView: View {
                 .lineLimit(2)
                 .padding()
         }
+        .navigationTitle("Details")
     }
 }
 

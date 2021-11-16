@@ -11,8 +11,11 @@
 		9612DC0A2738EF030013E259 /* NftListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9612DC092738EF030013E259 /* NftListView.swift */; };
 		9612DC0C2738EF060013E259 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9612DC0B2738EF060013E259 /* Assets.xcassets */; };
 		9612DC0F2738EF060013E259 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9612DC0E2738EF060013E259 /* Preview Assets.xcassets */; };
-		965410D82739B3B8009BD304 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965410D72739B3B8009BD304 /* Data.swift */; };
+		965410D82739B3B8009BD304 /* OpenseaApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965410D72739B3B8009BD304 /* OpenseaApi.swift */; };
 		9679A670273A4DE4001D4F8E /* NftDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9679A66F273A4DE4001D4F8E /* NftDetailView.swift */; };
+		ED87D47B273ED82F00FB7365 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED87D47A273ED82F00FB7365 /* LoginView.swift */; };
+		ED87D481273EE2CE00FB7365 /* WalletApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED87D480273EE2CE00FB7365 /* WalletApi.swift */; };
+		ED87D484273F128A00FB7365 /* web3swift in Frameworks */ = {isa = PBXBuildFile; productRef = ED87D483273F128A00FB7365 /* web3swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,8 +24,10 @@
 		9612DC092738EF030013E259 /* NftListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftListView.swift; sourceTree = "<group>"; };
 		9612DC0B2738EF060013E259 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9612DC0E2738EF060013E259 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		965410D72739B3B8009BD304 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		965410D72739B3B8009BD304 /* OpenseaApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenseaApi.swift; sourceTree = "<group>"; };
 		9679A66F273A4DE4001D4F8E /* NftDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftDetailView.swift; sourceTree = "<group>"; };
+		ED87D47A273ED82F00FB7365 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		ED87D480273EE2CE00FB7365 /* WalletApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED87D484273F128A00FB7365 /* web3swift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,9 +62,10 @@
 			isa = PBXGroup;
 			children = (
 				9612DC072738EF030013E259 /* NftDisplayApp.swift */,
+				ED87D47A273ED82F00FB7365 /* LoginView.swift */,
 				9612DC092738EF030013E259 /* NftListView.swift */,
 				9679A66F273A4DE4001D4F8E /* NftDetailView.swift */,
-				965410D72739B3B8009BD304 /* Data.swift */,
+				EDE8DFB6274373CB00D2E081 /* Api */,
 				9612DC0B2738EF060013E259 /* Assets.xcassets */,
 				9612DC0D2738EF060013E259 /* Preview Content */,
 			);
@@ -71,6 +78,15 @@
 				9612DC0E2738EF060013E259 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EDE8DFB6274373CB00D2E081 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				965410D72739B3B8009BD304 /* OpenseaApi.swift */,
+				ED87D480273EE2CE00FB7365 /* WalletApi.swift */,
+			);
+			path = Api;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +105,9 @@
 			dependencies = (
 			);
 			name = NftDisplay;
+			packageProductDependencies = (
+				ED87D483273F128A00FB7365 /* web3swift */,
+			);
 			productName = NftDisplay;
 			productReference = 9612DC042738EF030013E259 /* NftDisplay.app */;
 			productType = "com.apple.product-type.application";
@@ -118,7 +137,7 @@
 			);
 			mainGroup = 9612DBFB2738EF030013E259;
 			packageReferences = (
-				EDD9B105273DC2DC00F0465F /* XCRemoteSwiftPackageReference "web3swift" */,
+				ED87D482273F128A00FB7365 /* XCRemoteSwiftPackageReference "web3swift" */,
 			);
 			productRefGroup = 9612DC052738EF030013E259 /* Products */;
 			projectDirPath = "";
@@ -146,9 +165,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED87D481273EE2CE00FB7365 /* WalletApi.swift in Sources */,
 				9612DC0A2738EF030013E259 /* NftListView.swift in Sources */,
-				965410D82739B3B8009BD304 /* Data.swift in Sources */,
+				965410D82739B3B8009BD304 /* OpenseaApi.swift in Sources */,
 				9612DC082738EF030013E259 /* NftDisplayApp.swift in Sources */,
+				ED87D47B273ED82F00FB7365 /* LoginView.swift in Sources */,
 				9679A670273A4DE4001D4F8E /* NftDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,15 +377,23 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		EDD9B105273DC2DC00F0465F /* XCRemoteSwiftPackageReference "web3swift" */ = {
+		ED87D482273F128A00FB7365 /* XCRemoteSwiftPackageReference "web3swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/skywinder/web3swift";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
+				kind = exactVersion;
+				version = 2.2.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ED87D483273F128A00FB7365 /* web3swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED87D482273F128A00FB7365 /* XCRemoteSwiftPackageReference "web3swift" */;
+			productName = web3swift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9612DBFC2738EF030013E259 /* Project object */;
 }

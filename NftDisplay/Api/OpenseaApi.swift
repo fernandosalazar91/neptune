@@ -5,7 +5,6 @@
 //  Created by Work on 11/8/21.
 //
 
-import Foundation
 import SwiftUI
 
 struct AssetsResponse: Codable {
@@ -18,13 +17,14 @@ struct Nft: Codable, Identifiable {
     var name: String
     var description: String
     var image_url: String
-    var animation_url: String
+    var animation_url: String?
 }
 
 class Api {
-    func getNfts(completion: @escaping ([Nft]) -> ()) {
-        let owneraddress = "0xce6c126eeec5abca0e6a80653a0b693051f55cda"
-        let url = URL(string: "https://api.opensea.io/api/v1/assets?owner=\(owneraddress)&order_direction=desc&offset=0&limit=20")!
+    func getNfts(publicAddress: String, completion: @escaping ([Nft]) -> ()) {
+        print("Fetching NFTs")
+        let url = URL(string: "https://api.opensea.io/api/v1/assets?owner=\(publicAddress)&order_direction=desc&offset=0&limit=20")!
+        print(url)
         
         URLSession.shared.dataTask(with: url) { (data, _, _) in
             let response = try! JSONDecoder().decode(AssetsResponse.self, from: data!)
@@ -36,5 +36,4 @@ class Api {
         }
         .resume()
     }
-    
 }
